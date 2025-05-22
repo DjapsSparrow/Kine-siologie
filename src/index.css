@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés pour le calendrier */
+.custom-calendar {
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+.rbc-calendar {
+  @apply border-0 shadow-none;
+}
+
+.rbc-toolbar {
+  @apply mb-6 flex-wrap gap-2;
+}
+
+.rbc-toolbar button {
+  @apply px-4 py-2 text-sm font-medium rounded-md border border-gray-300 
+         bg-white text-gray-700 hover:bg-gray-50 focus:outline-none 
+         focus:ring-2 focus:ring-offset-2 focus:ring-green-500;
+}
+
+.rbc-toolbar button.rbc-active {
+  @apply bg-green-50 text-green-700 border-green-200;
+}
+
+.rbc-toolbar-label {
+  @apply text-lg font-semibold text-gray-900;
+}
+
+.rbc-header {
+  @apply py-3 font-medium text-gray-900 border-b border-gray-200 capitalize;
+}
+
+.rbc-time-header-content {
+  @apply border-l border-gray-200;
+}
+
+.rbc-time-content {
+  @apply border-l border-gray-200;
+}
+
+.rbc-time-slot {
+  @apply text-gray-500 text-sm;
+}
+
+.rbc-event {
+  @apply rounded-md shadow-sm border-none;
+}
+
+.rbc-event-content {
+  @apply text-sm font-medium px-2 py-1;
+}
+
+.rbc-today {
+  @apply bg-green-50;
+}
+
+.rbc-off-range-bg {
+  @apply bg-gray-50;
+}
+
+.rbc-time-view {
+  @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+
+.rbc-timeslot-group {
+  @apply border-b border-gray-100 min-h-[60px];
+}
+
+.rbc-time-gutter .rbc-timeslot-group {
+  @apply border-r border-gray-200;
+}
+
+.rbc-day-slot .rbc-time-slot {
+  @apply border-t border-gray-100;
+}
+
+.rbc-current-time-indicator {
+  @apply bg-green-500;
+}
+
+.rbc-time-content > * + * > * {
+  @apply border-l border-gray-200;
+}
+
+.rbc-day-bg + .rbc-day-bg {
+  @apply border-l border-gray-200;
+}
+
+.rbc-month-view {
+  @apply border border-gray-200 rounded-lg overflow-hidden;
+}
+
+.rbc-month-row + .rbc-month-row {
+  @apply border-t border-gray-200;
+}
+
+.rbc-date-cell {
+  @apply text-sm text-gray-600 p-1;
+}
+
+.rbc-date-cell.rbc-now {
+  @apply text-green-600 font-semibold;
+}
+
+.rbc-row-segment {
+  @apply px-1;
+}
+
+.rbc-show-more {
+  @apply text-xs text-green-600 hover:text-green-700 hover:underline;
+}
